@@ -1,0 +1,207 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Fightin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Special+Elite&display=swap">
+<link rel="stylesheet" href="styles.css">
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="index.html">Fightin</a>
+  <a data-page="fights" href="fights.html">Fight card</a>
+  <a data-page="fighters" href="fighters.html">Fighters</a>
+  <a data-page="challenge" href="challenge.html">Challenge</a>
+  <a data-page="rules" href="rules.html">Rules</a>
+  <a data-page="faq" href="faq.html">FAQ</a>
+</nav>
+
+<main>
+  <header class="hero">
+    <h1 class="wordmark" aria-label="Fightin"><span>F</span><span>I</span><span>G</span><span>H</span><span>T</span><span>I</span><span>N</span></h1>
+    <div class="hero-row">
+      <div>
+        <p class="hero-copy">Two fighters. One purse. Somebody calls somebody out, the other says yes, and eight minutes of padded violence later the winner walks off with the money. Basement level, every Friday.</p>
+        <div class="cta-row">
+          <a class="cta" href="challenge.html">Call someone out</a>
+          <a class="cta ghost" href="#join">Get a card</a>
+        </div>
+      </div>
+      <div style="display:grid; gap:1.4rem; min-width:0">
+        <div class="stamp">Winner takes all</div>
+        <div class="clock">
+          <p class="label">Next bell rings in</p>
+          <div class="digits" id="digits">
+            <div><b id="d">--</b><small>days</small></div>
+            <div><b id="h">--</b><small>hours</small></div>
+            <div><b id="m">--</b><small>min</small></div>
+            <div><b id="s">--</b><small>sec</small></div>
+          </div>
+          <p class="note" id="when">Friday, 9 PM, your local time.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="night">
+    <p class="tag">A typical Friday</p>
+    <h2>By the numbers</h2>
+    <div class="facts">
+      <div class="fact"><b>5</b><span>Bouts a night</span></div>
+      <div class="fact"><b>3</b><span>Rounds each</span></div>
+      <div class="fact"><b>3:00</b><span>Per round</span></div>
+      <div class="fact"><b>1</b><span>Doctor ringside</span></div>
+      <div class="fact"><b>0</b><span>Bare knuckles</span></div>
+    </div>
+  </section>
+
+  <section id="card">
+    <p class="tag">This Friday</p>
+    <h2>The card</h2>
+    <p class="lede">Five bouts, matched by weight and by how much you talk before the bell. The purse is what each fight is worth to the winner. All fighters below are invented examples.</p>
+    <ol class="bouts">
+      <li class="bout">
+        <span class="cls">Under 60 kg</span>
+        <span class="vs">Kabir <em>vs</em> The Auditor</span>
+        <span class="meta"><b>₹3,000</b>3 x 3 min</span>
+      </li>
+      <li class="bout">
+        <span class="cls">60 to 70 kg</span>
+        <span class="vs">Big Sandeep <em>vs</em> Tuesday</span>
+        <span class="meta"><b>₹5,000</b>3 x 3 min</span>
+      </li>
+      <li class="bout">
+        <span class="cls">70 to 80 kg</span>
+        <span class="vs">Meera <em>vs</em> Night Shift</span>
+        <span class="meta"><b>₹8,000</b>3 x 3 min</span>
+      </li>
+      <li class="bout">
+        <span class="cls">80 kg and over</span>
+        <span class="vs">Landlord <em>vs</em> Unpaid Intern</span>
+        <span class="meta"><b>₹10,000</b>3 x 3 min</span>
+      </li>
+      <li class="bout main">
+        <span class="cls">Main event</span>
+        <span class="vs">Landlord <em>vs</em> His Inbox</span>
+        <span class="meta"><b>₹25,000</b>5 x 3 min</span>
+      </li>
+    </ol>
+    <a class="more" href="fights.html">Full card and past results</a>
+  </section>
+
+  <section id="how">
+    <p class="tag">Start to finish</p>
+    <h2>How a fight works</h2>
+    <ol class="steps">
+      <li><h3>Post a purse</h3><p>Pick a weight class and an amount. Say when and where you can fight.</p></li>
+      <li><h3>Get a taker</h3><p>Another fighter accepts. The challenge is locked and nobody else can take it.</p></li>
+      <li><h3>Fight</h3><p>Three rounds, gloves on, a doctor close by. Both fighters hand the purse to the referee before the bell.</p></li>
+      <li><h3>Collect</h3><p>The referee calls the winner and the winner takes the whole purse. The house keeps nothing.</p></li>
+    </ol>
+    <a class="more" href="challenge.html">Write your challenge</a>
+  </section>
+
+  <section id="run">
+    <p class="tag">Doors to last bell</p>
+    <h2>The night, hour by hour</h2>
+    <div class="two-col">
+      <div>
+        <h3 class="subhead" style="margin-top:0">Schedule</h3>
+        <ol class="night">
+          <li><time>8:30</time><div><strong>Doors open</strong><span>Sign the sheet, hand over your purse.</span></div></li>
+          <li><time>8:45</time><div><strong>Weigh-in and gear check</strong><span>Wrong weight means a different opponent.</span></div></li>
+          <li><time>9:00</time><div><strong>First bell</strong><span>Lightest class goes first.</span></div></li>
+          <li><time>10:30</time><div><strong>Main event</strong><span>Five rounds, biggest purse of the night.</span></div></li>
+          <li><time>11:00</time><div><strong>Purses paid out</strong><span>Winners collect from the referee.</span></div></li>
+        </ol>
+      </div>
+      <div>
+        <h3 class="subhead" style="margin-top:0">Gear check</h3>
+        <ul class="gear">
+          <li class="must"><span>Mouth guard</span><span>Yours, not borrowed</span></li>
+          <li class="must"><span>Gloves</span><span>12 to 16 oz</span></li>
+          <li class="must"><span>Hand wraps</span><span>Wrists taped, not loose</span></li>
+          <li class="must"><span>Headgear</span><span>Provided if you forget</span></li>
+          <li><span>Water bottle</span><span>Strongly recommended</span></li>
+          <li><span>Spare shirt</span><span>You will want it</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="rules">
+    <p class="tag">Pinned to the door</p>
+    <h2>House rules</h2>
+    <p class="lede">Break one and you are off the board for a month. Break two and the group chat finds out.</p>
+    <ol class="rules">
+      <li><h3>Gloves stay on</h3><p>Bare knuckles belong in movies. Ours go home intact.</p></li>
+      <li><h3>Tap means done</h3><p>A tap, a word or a wave ends the round. Nobody asks why.</p></li>
+      <li><h3>Go easy on heads</h3><p>You have a meeting on Monday and so does your opponent.</p></li>
+      <li><h3>Purse before bell</h3><p>If the money is not with the referee, the fight does not start.</p></li>
+      <li><h3>Stop on the bell</h3><p>First time, every time. The bell is louder than your pride.</p></li>
+      <li><h3>Shake hands after</h3><p>Win or lose, you thank the person who just let you hit them.</p></li>
+    </ol>
+    <a class="more" href="rules.html">Every rule, in full</a>
+  </section>
+
+  <section id="join">
+    <p class="tag">Walk-ins turned away</p>
+    <h2>Get a card</h2>
+    <p class="lede">Fill this in and your membership card appears. This page keeps nothing, so screenshot it and bring it on Friday. Members are 18 and over.</p>
+    <div class="join">
+      <form id="form-member" autocomplete="off">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your real name" required maxlength="24">
+        </div>
+        <div class="field">
+          <label for="alias">Ring name</label>
+          <input id="alias" name="alias" type="text" placeholder="What the crowd shouts" maxlength="24">
+        </div>
+        <div class="field">
+          <label for="cls">Weight class</label>
+          <select id="cls" name="cls">
+            <option>Under 60 kg</option>
+            <option>60 to 70 kg</option>
+            <option selected>70 to 80 kg</option>
+            <option>80 kg and over</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="day">What do you do all week?</label>
+          <input id="day" name="day" type="text" placeholder="Spreadsheets, mostly" maxlength="40">
+        </div>
+        <button class="cta" type="submit">Issue my card</button>
+      </form>
+
+      <div class="card blank" id="member" aria-live="polite">
+        <div class="top"><span>Fightin member</span><span id="no">No. ----</span></div>
+        <p class="nm" id="cName">Your name here</p>
+        <dl>
+          <dt>Ring name</dt><dd id="cAlias">Not chosen yet</dd>
+          <dt>Class</dt><dd id="cCls">70 to 80 kg</dd>
+          <dt>Day job</dt><dd id="cDay">Classified</dd>
+          <dt>Issued</dt><dd id="cDate">Pending</dd>
+        </dl>
+        <div class="seal" id="seal" hidden>Approved</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="explore">
+    <p class="tag">Keep looking</p>
+    <h2>Around the club</h2>
+    <div class="tiles">
+      <a class="tile" href="fights.html"><b>Fight card</b><span>This Friday's bouts, next week and past results.</span></a>
+      <a class="tile" href="fighters.html"><b>Fighters</b><span>Records, winnings and what they say about themselves.</span></a>
+      <a class="tile" href="challenge.html"><b>Challenge</b><span>Name your purse and make a slip to send your opponent.</span></a>
+      <a class="tile" href="faq.html"><b>FAQ</b><span>Money, safety, gear and who can walk in.</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Fightin is a sparring club concept. Padded, supervised and consensual. 18 and over.</span>
+  <span>Purses are agreed between the fighters and the referee. This site does not hold or send money.</span>
+</footer>
+<script>document.body.setAttribute("data-page", "home");</script>
+<script src="app.js"></script>
+
+</body></html>

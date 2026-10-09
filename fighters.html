@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fightin Roster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Special+Elite&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="fighters">
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="index.html">Fightin</a>
+  <a data-page="fights" href="fights.html">Fight card</a>
+  <a data-page="fighters" href="fighters.html">Fighters</a>
+  <a data-page="challenge" href="challenge.html">Challenge</a>
+  <a data-page="rules" href="rules.html">Rules</a>
+  <a data-page="faq" href="faq.html">FAQ</a>
+</nav>
+
+<main>
+  <header class="page-head">
+    <h1>The fighters</h1>
+    <p>Everyone on the board, ranked by money won. Records and quotes are invented examples until real fighters sign up.</p>
+  </header>
+
+  <section id="roster-section">
+    <p class="tag">Ranked by winnings</p>
+    <h2>The roster</h2>
+    <div class="tabs" id="filters" role="group" aria-label="Filter by weight class">
+      <button type="button" data-cls="All" aria-pressed="true">All</button>
+      <button type="button" data-cls="Under 60 kg" aria-pressed="false">Under 60 kg</button>
+      <button type="button" data-cls="60 to 70 kg" aria-pressed="false">60 to 70 kg</button>
+      <button type="button" data-cls="70 to 80 kg" aria-pressed="false">70 to 80 kg</button>
+      <button type="button" data-cls="80 kg and over" aria-pressed="false">80 kg and over</button>
+    </div>
+    <ol class="roster" id="roster"></ol>
+  </section>
+
+  <section id="join-us">
+    <p class="tag">Not on the list</p>
+    <h2>Add your name</h2>
+    <p class="lede">Every fighter starts at 0 and 0. Get a membership card, post a purse, and the first win puts you on this page.</p>
+    <div class="cta-row">
+      <a class="cta" href="index.html#join">Get a card</a>
+      <a class="cta ghost" href="challenge.html">Post a challenge</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Fightin is a sparring club concept. Padded, supervised and consensual. 18 and over.</span>
+  <span>Purses are agreed between the fighters and the referee. This site does not hold or send money.</span>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

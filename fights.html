@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fightin Fight Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Special+Elite&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="fights">
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="index.html">Fightin</a>
+  <a data-page="fights" href="fights.html">Fight card</a>
+  <a data-page="fighters" href="fighters.html">Fighters</a>
+  <a data-page="challenge" href="challenge.html">Challenge</a>
+  <a data-page="rules" href="rules.html">Rules</a>
+  <a data-page="faq" href="faq.html">FAQ</a>
+</nav>
+
+<main>
+  <header class="page-head">
+    <h1>The fight card</h1>
+    <p>What is on this Friday, who is still looking for an opponent, and who took the money home last time. All fighters on this page are invented examples.</p>
+  </header>
+
+  <section id="friday">
+    <p class="tag">This Friday, 9 PM</p>
+    <h2>Locked in</h2>
+    <p class="lede">Both fighters have agreed and the purses are going to the referee at the door.</p>
+    <ol class="bouts">
+      <li class="bout"><span class="cls">Under 60 kg</span><span class="vs">Kabir <em>vs</em> The Auditor</span><span class="meta"><b>₹3,000</b>3 x 3 min</span></li>
+      <li class="bout"><span class="cls">60 to 70 kg</span><span class="vs">Big Sandeep <em>vs</em> Tuesday</span><span class="meta"><b>₹5,000</b>3 x 3 min</span></li>
+      <li class="bout"><span class="cls">70 to 80 kg</span><span class="vs">Meera <em>vs</em> Night Shift</span><span class="meta"><b>₹8,000</b>3 x 3 min</span></li>
+      <li class="bout"><span class="cls">80 kg and over</span><span class="vs">Landlord <em>vs</em> Unpaid Intern</span><span class="meta"><b>₹10,000</b>3 x 3 min</span></li>
+      <li class="bout main"><span class="cls">Main event</span><span class="vs">Landlord <em>vs</em> His Inbox</span><span class="meta"><b>₹25,000</b>5 x 3 min</span></li>
+    </ol>
+    <p class="fine">Total on the table this Friday: ₹51,000.</p>
+  </section>
+
+  <section id="open">
+    <p class="tag">Next Friday</p>
+    <h2>Opponent wanted</h2>
+    <p class="lede">These fighters have posted a purse and are waiting for someone to say yes.</p>
+    <ol class="bouts">
+      <li class="bout"><span class="cls">Under 60 kg</span><span class="vs">Kabir <em>vs</em> Anyone</span><span class="meta"><b>₹4,000</b>3 x 3 min</span></li>
+      <li class="bout"><span class="cls">70 to 80 kg</span><span class="vs">Night Shift <em>vs</em> Anyone</span><span class="meta"><b>₹12,000</b>3 x 3 min</span></li>
+      <li class="bout"><span class="cls">80 kg and over</span><span class="vs">Landlord <em>vs</em> Anyone</span><span class="meta"><b>₹20,000</b>5 x 3 min</span></li>
+    </ol>
+    <a class="cta" href="challenge.html">Take one on or post your own</a>
+  </section>
+
+  <section id="results">
+    <p class="tag">Last month</p>
+    <h2>Who got paid</h2>
+    <p class="lede">The loser's name is struck through. The purse went to the other one.</p>
+    <ol class="bouts">
+      <li class="bout"><span class="cls">Main event</span><span class="vs">Landlord <em>vs</em> <span class="lose">The Auditor</span></span><span class="meta"><b>₹20,000</b>Won in round 4</span></li>
+      <li class="bout"><span class="cls">70 to 80 kg</span><span class="vs"><span class="lose">Meera</span> <em>vs</em> Night Shift</span><span class="meta"><b>₹8,000</b>Decision</span></li>
+      <li class="bout"><span class="cls">60 to 70 kg</span><span class="vs">Tuesday <em>vs</em> <span class="lose">Big Sandeep</span></span><span class="meta"><b>₹5,000</b>Won in round 2</span></li>
+      <li class="bout"><span class="cls">Under 60 kg</span><span class="vs">Kabir <em>vs</em> <span class="lose">Unpaid Intern</span></span><span class="meta"><b>₹3,000</b>Tapped out</span></li>
+    </ol>
+  </section>
+
+  <section id="classes">
+    <p class="tag">Matched fairly</p>
+    <h2>Weight classes</h2>
+    <div class="facts">
+      <div class="fact"><b>60</b><span>Under 60 kg</span></div>
+      <div class="fact"><b>70</b><span>60 to 70 kg</span></div>
+      <div class="fact"><b>80</b><span>70 to 80 kg</span></div>
+      <div class="fact"><b>80+</b><span>80 kg and over</span></div>
+    </div>
+    <p class="fine">Weigh-in is at 8:45 PM. If your weight puts you in another class, the referee finds you a new opponent.</p>
+  </section>
+</main>
+
+<footer>
+  <span>Fightin is a sparring club concept. Padded, supervised and consensual. 18 and over.</span>
+  <span>Purses are agreed between the fighters and the referee. This site does not hold or send money.</span>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

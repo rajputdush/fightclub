@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fightin Challenge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Special+Elite&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="challenge">
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="index.html">Fightin</a>
+  <a data-page="fights" href="fights.html">Fight card</a>
+  <a data-page="fighters" href="fighters.html">Fighters</a>
+  <a data-page="challenge" href="challenge.html">Challenge</a>
+  <a data-page="rules" href="rules.html">Rules</a>
+  <a data-page="faq" href="faq.html">FAQ</a>
+</nav>
+
+<main>
+  <header class="page-head">
+    <h1>Call someone out</h1>
+    <p>Name the purse, name the opponent, and get a challenge slip you can send. Winner takes all.</p>
+  </header>
+
+  <section id="slip-section">
+    <p class="tag">Write it down</p>
+    <h2>The challenge slip</h2>
+    <p class="lede">Fill in the form and the slip updates. Copy the text and send it to whoever you want to fight. This page keeps nothing.</p>
+    <div class="join">
+      <form id="form-challenge" autocomplete="off">
+        <div class="two">
+          <div class="field">
+            <label for="ring">Your ring name</label>
+            <input id="ring" name="ring" type="text" placeholder="What the crowd shouts" maxlength="24" required>
+          </div>
+          <div class="field">
+            <label for="foe">Who are you calling out</label>
+            <input id="foe" name="foe" type="text" placeholder="Leave empty for anyone" maxlength="24">
+          </div>
+        </div>
+        <div class="two">
+          <div class="field">
+            <label for="cls">Weight class</label>
+            <select id="cls" name="cls">
+              <option>Under 60 kg</option>
+              <option>60 to 70 kg</option>
+              <option selected>70 to 80 kg</option>
+              <option>80 kg and over</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="purse">Purse in rupees</label>
+            <input id="purse" name="purse" type="number" inputmode="numeric" min="100" max="1000000" step="50" placeholder="5000" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="where">When and where</label>
+          <input id="where" name="where" type="text" placeholder="Friday, 9 PM, basement level" maxlength="48">
+        </div>
+        <div class="field">
+          <label for="line">Say something to your opponent</label>
+          <input id="line" name="line" type="text" placeholder="Bring your own water" maxlength="80">
+        </div>
+        <button class="cta" type="submit">Write the slip</button>
+        <p class="msg" id="cmsg" role="status"></p>
+      </form>
+
+      <div style="min-width:0">
+        <div class="card blank" id="slip" aria-live="polite">
+          <div class="top"><span>Challenge slip</span><span id="sNo">No. ----</span></div>
+          <p class="nm" id="sName">Your ring name</p>
+          <p class="label" style="margin-top:0.2rem">Calls out</p>
+          <p class="nm" style="font-size:clamp(1.8rem,6vw,2.6rem);margin-top:0" id="sFoe">Anyone brave enough</p>
+          <p class="purse" id="sPurse">₹0</p>
+          <dl>
+            <dt>Class</dt><dd id="sCls">70 to 80 kg</dd>
+            <dt>Where</dt><dd id="sWhere">Friday, 9 PM, basement level</dd>
+            <dt>Message</dt><dd id="sLine">No comment.</dd>
+            <dt>Written</dt><dd id="sDate">Pending</dd>
+          </dl>
+          <div class="seal" id="sSeal" hidden>Winner takes all</div>
+        </div>
+        <div class="share" id="share" hidden>
+          <label class="label" for="shareText">Message to send</label>
+          <textarea id="shareText" readonly></textarea>
+          <button class="cta ghost" id="copy" type="button" style="margin-top:0">Copy message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="terms">
+    <p class="tag">Before you send it</p>
+    <h2>What you are agreeing to</h2>
+    <ol class="rules">
+      <li><h3>The purse is real</h3><p>Both of you put the full amount in the referee's hands before the bell.</p></li>
+      <li><h3>Winner takes it all</h3><p>No cut for the house, no split for a draw. A draw means the purse goes back to both fighters.</p></li>
+      <li><h3>Either of you can stop</h3><p>A tap ends the fight and the other fighter wins. No arguing at the door.</p></li>
+      <li><h3>Same weight class</h3><p>If the scale disagrees with your slip, the referee changes your opponent.</p></li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <span>Fightin is a sparring club concept. Padded, supervised and consensual. 18 and over.</span>
+  <span>Purses are agreed between the fighters and the referee. This site does not hold or send money.</span>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
