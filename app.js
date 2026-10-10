@@ -17,6 +17,41 @@
     if (a.getAttribute("data-page") === page) a.setAttribute("aria-current", "page");
   });
 
+  /* persistent theme switch */
+  var root = document.documentElement;
+  var themeButton = document.createElement("button");
+  themeButton.type = "button";
+  themeButton.className = "theme-toggle";
+  themeButton.setAttribute("aria-label", "Switch color theme");
+  themeButton.innerHTML = "◐ <span>Theme</span>";
+  var savedTheme = null;
+  try { savedTheme = localStorage.getItem("fightin-theme"); } catch (e) {}
+  root.setAttribute("data-theme", savedTheme || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+  var nav = document.querySelector(".nav");
+  if (nav) nav.appendChild(themeButton);
+  themeButton.addEventListener("click", function () {
+    var theme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", theme);
+    try { localStorage.setItem("fightin-theme", theme); } catch (e) {}
+    themeButton.setAttribute("aria-label", "Switch to " + (theme === "dark" ? "light" : "dark") + " theme");
+  });
+
+  /* gentle entrance as sections enter view */
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var revealItems = document.querySelectorAll(".hero, .page-head, main > section, footer");
+    revealItems.forEach(function (el) { el.classList.add("reveal"); });
+    document.body.classList.add("js-ready");
+    var revealObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealItems.forEach(function (el) { revealObserver.observe(el); });
+  }
+
   /* countdown to the next Friday 9 PM, in the viewer's own time */
   if ($("digits")) {
     var nextBell = function () {
