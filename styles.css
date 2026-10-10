@@ -317,6 +317,36 @@ footer { border-top-width: 1px; }
   .theme-toggle { font-size: .68rem; padding: .38rem .55rem; }
   .hero::before { width: 90vw; right: -30%; top: 5%; }
 }
+
+@media (max-width: 600px) {
+  html, body { width: 100%; max-width: 100%; overflow-x: clip; }
+  body { padding-inline: .85rem; }
+  .nav {
+    position: relative; inset: auto; width: 100%; max-width: 100%; margin: 0;
+    padding: .75rem 0; gap: .35rem .25rem; box-sizing: border-box;
+  }
+  .nav .brand { margin-right: auto; }
+  .nav a:not(.brand) { font-size: .67rem; padding: .38rem .45rem; letter-spacing: .07em; }
+  .theme-toggle { font-size: .67rem; padding: .38rem .48rem; }
+  main, footer { width: 100%; min-width: 0; }
+  .hero { min-width: 0; padding: 2.5rem 0 2rem; }
+  .hero::before { width: 75vw; right: -12%; top: 4%; }
+  .wordmark {
+    max-width: 100%; white-space: nowrap; font-size: clamp(3.35rem, 19vw, 6.2rem);
+    letter-spacing: -.045em; transform: none;
+  }
+  .wordmark span:nth-child(3), .wordmark span:nth-child(6) { transform: none; }
+  .hero-row, .join, .two-col { min-width: 0; }
+  .hero-copy { font-size: 1.02rem; }
+  .cta-row { gap: .65rem; }
+  .cta { max-width: 100%; font-size: 1.25rem; padding: .5rem .85rem; }
+  .clock { min-width: 0; }
+  .digits { gap: .55rem; }
+  .digits div { min-width: 2.7rem; }
+  .digits b { font-size: 2.5rem; }
+  .bout.main { margin-inline: 0; }
+  .page-head h1 { font-size: clamp(3rem, 15vw, 5.5rem); }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .js-ready .reveal { opacity: 1; transform: none; }
