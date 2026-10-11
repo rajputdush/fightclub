@@ -291,7 +291,7 @@ main { max-width: 72rem; }
 .digits { gap: .7rem 1.35rem; }
 .digits div { min-width: 3.1rem; padding: .35rem .45rem; border-radius: .65rem; background: var(--bruise-wash); }
 section { padding-block: clamp(2.5rem, 6vw, 4.2rem); border-top-width: 1px; }
-.tag { border-radius: 999px; padding: .28rem .72rem; background: var(--yellow); color: var(--ink); font-size: .7rem; font-weight: 700; }
+.tag { border-radius: 999px; padding: .28rem .72rem; background: var(--yellow); color: #171222; font-size: .7rem; font-weight: 700; }
 h2 { letter-spacing: -.025em; }
 .cta { border-radius: .65rem; box-shadow: 4px 4px 0 var(--bruise); }
 .cta:hover { box-shadow: 6px 6px 0 var(--yellow); }
